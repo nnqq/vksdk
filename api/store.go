@@ -26,6 +26,20 @@ func (vk *VK) StoreDeactivateProduct(params Params) (response int, err error) {
 	return
 }
 
+// StoreGetFavoriteStickersResponse struct.
+type StoreGetFavoriteStickersResponse struct {
+	Count int                   `json:"count"`
+	Items []object.StoreSticker `json:"items"`
+}
+
+// StoreGetFavoriteStickers method.
+//
+// https://vk.com/dev/store.getFavoriteStickers
+func (vk *VK) StoreGetFavoriteStickers(params Params) (response StoreGetFavoriteStickersResponse, err error) {
+	err = vk.RequestUnmarshal("store.getFavoriteStickers", params, &response)
+	return
+}
+
 // StoreGetProductsResponse struct.
 type StoreGetProductsResponse struct {
 	Count int                   `json:"count"`
