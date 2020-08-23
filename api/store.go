@@ -10,6 +10,14 @@ func (vk *VK) StoreActivateProduct(params Params) (response int, err error) {
 	return
 }
 
+// StoreAddStickersToFavorite method.
+//
+// https://vk.com/dev/store.addStickersToFavorite
+func (vk *VK) StoreAddStickersToFavorite(params Params) (response int, err error) {
+	err = vk.RequestUnmarshal("store.addStickersToFavorite", params, &response)
+	return
+}
+
 // StoreGetProductsResponse struct.
 type StoreGetProductsResponse struct {
 	Count int                   `json:"count"`
