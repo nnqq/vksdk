@@ -70,3 +70,11 @@ func (vk *VK) StoreMarkAsViewed(params Params) (response int, err error) {
 	return
 }
 
+// StoreRemoveStickersFromFavorite method.
+//
+// https://vk.com/dev/store.removeStickersFromFavorite
+func (vk *VK) StoreRemoveStickersFromFavorite(params Params) (response int, err error) {
+	err = vk.RequestUnmarshal("store.removeStickersFromFavorite", params, &response)
+	return
+}
+
