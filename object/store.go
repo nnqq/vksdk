@@ -20,18 +20,9 @@ type StoreProduct struct {
 // StoreProductExtended struct.
 type StoreProductExtended struct {
 	StoreProduct
-	Title        string         `json:"title"`
-	Stickers     []StoreSticker `json:"stickers"`
-	Icon         []BaseImage    `json:"icon"`
-	Previews     []BaseImage    `json:"previews"`
-	HasAnimation BaseBoolInt    `json:"has_animation"`
-}
-
-// StoreSticker struct.
-type StoreSticker struct {
-	StickerID            int         `json:"sticker_id"`
-	IsAllowed            BaseBoolInt `json:"is_allowed"`
-	Images               []BaseImage `json:"images"`
-	ImagesWithBackground []BaseImage `json:"images_with_background"`
-	AnimationURL         string      `json:"animation_url"`
+	Title        string        `json:"title"`
+	Stickers     []BaseSticker `json:"stickers"`
+	Icon         []BaseImage   `json:"icon"`
+	Previews     []BaseImage   `json:"previews"`
+	HasAnimation BaseBoolInt   `json:"has_animation"`
 }

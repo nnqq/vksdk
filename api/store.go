@@ -28,8 +28,8 @@ func (vk *VK) StoreDeactivateProduct(params Params) (response int, err error) {
 
 // StoreGetFavoriteStickersResponse struct.
 type StoreGetFavoriteStickersResponse struct {
-	Count int                   `json:"count"`
-	Items []object.StoreSticker `json:"items"`
+	Count int                  `json:"count"`
+	Items []object.BaseSticker `json:"items"`
 }
 
 // StoreGetFavoriteStickers method.
@@ -77,7 +77,7 @@ func (vk *VK) StoreGetProductsExtended(params Params) (response StoreGetProducts
 }
 
 // StoreGetStickersResponse struct.
-type StoreGetStickersResponse []object.StoreSticker
+type StoreGetStickersResponse []object.BaseSticker
 
 // StoreGetStickers method.
 //
