@@ -18,6 +18,14 @@ func (vk *VK) StoreAddStickersToFavorite(params Params) (response int, err error
 	return
 }
 
+// StoreDeactivateProduct method.
+//
+// https://vk.com/dev/store.deactivateProduct
+func (vk *VK) StoreDeactivateProduct(params Params) (response int, err error) {
+	err = vk.RequestUnmarshal("store.deactivateProduct", params, &response)
+	return
+}
+
 // StoreGetProductsResponse struct.
 type StoreGetProductsResponse struct {
 	Count int                   `json:"count"`
