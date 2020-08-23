@@ -78,3 +78,10 @@ func (vk *VK) StoreRemoveStickersFromFavorite(params Params) (response int, err 
 	return
 }
 
+// StoreReorderProducts method.
+//
+// https://vk.com/dev/store.reorderProducts
+func (vk *VK) StoreReorderProducts(params Params) (response int, err error) {
+	err = vk.RequestUnmarshal("store.reorderProducts", params, &response)
+	return
+}
