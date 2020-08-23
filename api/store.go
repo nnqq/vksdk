@@ -2,6 +2,14 @@ package api
 
 import "github.com/SevereCloud/vksdk/object"
 
+// StoreActivateProduct method.
+//
+// https://vk.com/dev/store.activateProduct
+func (vk *VK) StoreActivateProduct(params Params) (response int, err error) {
+	err = vk.RequestUnmarshal("store.activateProduct", params, &response)
+	return
+}
+
 // StoreGetProductsResponse struct.
 type StoreGetProductsResponse struct {
 	Count int                   `json:"count"`
