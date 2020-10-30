@@ -7,6 +7,6 @@ package vksdk
 
 // Module constants.
 const (
-	Version = "2.6.0"
+	Version = "2.7.0"
 	API     = "5.124"
 )
